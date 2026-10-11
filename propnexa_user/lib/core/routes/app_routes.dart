@@ -8,7 +8,6 @@ import '../../ui/screens/auth/forgot_password_screen.dart';
 import '../../ui/screens/home/main_navigation_screen.dart';
 import '../../ui/screens/property/property_details_screen.dart';
 import '../../ui/screens/post/sell_property_form.dart';
-import '../../ui/screens/post/post_selection_screen.dart';
 import '../../ui/screens/listings/my_listings_screen.dart';
 import '../../ui/screens/explore/map_view_screen.dart';
 import '../../ui/screens/explore/filter_screen.dart';
@@ -69,7 +68,7 @@ class AppRoutes {
       ),
       GoRoute(
         path: postSelection,
-        builder: (context, state) => const PostSelectionScreen(),
+        builder: (context, state) => const MainNavigationScreen(initialIndex: 2),
       ),
       GoRoute(
         path: map,
