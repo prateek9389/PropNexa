@@ -7,7 +7,8 @@ import '../../ui/screens/auth/otp_screen.dart';
 import '../../ui/screens/auth/forgot_password_screen.dart';
 import '../../ui/screens/home/main_navigation_screen.dart';
 import '../../ui/screens/property/property_details_screen.dart';
-import '../../ui/screens/post/sell_property_form.dart';
+import '../../ui/screens/post/property_post_wizard_screen.dart';
+import '../../ui/screens/post/post_requirement_wizard_screen.dart';
 import '../../ui/screens/listings/my_listings_screen.dart';
 import '../../ui/screens/explore/map_view_screen.dart';
 import '../../ui/screens/explore/filter_screen.dart';
@@ -22,6 +23,8 @@ class AppRoutes {
   static const forgotPassword = '/forgot-password';
   static const mainNavigation = '/main';
   static const sellProperty = '/sell-property';
+  static const rentProperty = '/rent-property';
+  static const postRequirement = '/post-requirement';
   static const myListings = '/my-listings';
   static const postSelection = '/post-selection';
   static const map = '/map';
@@ -84,7 +87,17 @@ class AppRoutes {
       ),
       GoRoute(
         path: sellProperty,
-        builder: (context, state) => const SellPropertyForm(),
+        builder: (context, state) =>
+            const PropertyPostWizardScreen(mode: PropertyPostMode.sell),
+      ),
+      GoRoute(
+        path: rentProperty,
+        builder: (context, state) =>
+            const PropertyPostWizardScreen(mode: PropertyPostMode.rent),
+      ),
+      GoRoute(
+        path: postRequirement,
+        builder: (context, state) => const PostRequirementWizardScreen(),
       ),
       GoRoute(
         path: myListings,

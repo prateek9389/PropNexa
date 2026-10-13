@@ -334,7 +334,7 @@ class PostSelectionScreen extends StatelessWidget {
                             _buildIconBadge(Icons.verified_user_rounded, 'Secure Process', const Color(0xFF2563EB)),
                             _buildIconBadge(Icons.bolt_rounded, 'Quick Renting', const Color(0xFF2563EB)),
                           ],
-                          onTap: () => context.push(AppRoutes.sellProperty),
+                          onTap: () => context.push(AppRoutes.rentProperty),
                         ),
 
                         const SizedBox(height: 16),
@@ -360,15 +360,7 @@ class PostSelectionScreen extends StatelessWidget {
                             _buildIconBadge(Icons.notifications_active_rounded, 'Instant Notifications', const Color(0xFF059669)),
                             _buildIconBadge(Icons.groups_rounded, 'Genuine Owners', const Color(0xFF059669)),
                           ],
-                          onTap: () {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Post Requirement feature coming up next!'),
-                                behavior: SnackBarBehavior.floating,
-                                duration: Duration(seconds: 2),
-                              ),
-                            );
-                          },
+                          onTap: () => context.push(AppRoutes.postRequirement),
                         ),
 
                         const SizedBox(height: 24),
